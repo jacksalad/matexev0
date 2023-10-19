@@ -5,7 +5,7 @@
         &copy; {{ new Date().getFullYear() }} — <strong>MaTeXe</strong>. All rights
         reserved.
       </p>
-      <a class="p-footer" href="https://beian.miit.gov.cn/" target="_blank"
+      <a style="color: black;" href="https://beian.miit.gov.cn/" target="_blank"
         >晋ICP备2023018034号</a
       >
     </div>
