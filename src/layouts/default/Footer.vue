@@ -15,6 +15,5 @@
 <style>
 .max-height-footer {
   max-height: 70px; /* 设置最大高度为 200px */
-  overflow: auto; /* 添加滚动条，以防内容溢出 */
 }
 </style>

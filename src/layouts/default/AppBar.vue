@@ -1,6 +1,6 @@
 <template>
   <v-app-bar flat class="AppBar">
-    <v-app-bar-title cols="2">
+    <v-app-bar-title cols="3">
       <a href="/">
         <img src="@/assets/img/logo/logo.svg" alt="logo" />
       </a>
@@ -19,7 +19,7 @@
         <v-btn
           prepend-icon="mdi-clipboard-edit"
           class="BarLabel"
-          :class="{ active: $route.path === '/exer' }"
+          :class="{ active: $route.path.startsWith('/exer') }"
         >
           习题
         </v-btn>
@@ -28,7 +28,7 @@
         <v-btn
           prepend-icon="mdi-alert-decagram"
           class="BarLabel"
-          :class="{ active: $route.path === '/about' }"
+          :class="{ active: $route.path.startsWith('/about') }"
           >关于</v-btn
         >
       </router-link>
@@ -56,5 +56,9 @@ import { RouterLink } from "vue-router";
 .active {
   background-color: #494e8f; /* 设置选中页面的背景色为红色 */
   color: #fff; /* 设置选中页面的文字颜色为白色 */
+}
+
+img {
+  display: inline;
 }
 </style>

@@ -4,13 +4,13 @@
       <v-col cols="2">
         <!-- 左侧栏 -->
         <v-card>
-          <v-card-text> 左侧栏内容 </v-card-text>
+          <LeftBar />
         </v-card>
       </v-col>
       <v-col cols="10">
         <!-- 主要内容区域 -->
         <v-card>
-          <v-card-text> 主要内容区域内容 </v-card-text>
+          <router-view />
         </v-card>
       </v-col>
     </v-row>
@@ -18,5 +18,5 @@
 </template>
 
 <script setup>
-//
+import LeftBar from '@/components/sidebar/LeftBar.vue'
 </script>

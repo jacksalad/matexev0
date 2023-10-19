@@ -2,8 +2,9 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <v-card title="Home">
+        <v-card title="Home" v-katex>
           <v-card-text> 主页内容 </v-card-text>
+          <v-card-text> $$y = x^2$$ </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -15,6 +16,4 @@
 </script>
 
 <style scoped>
-.test {
-}
 </style>
