@@ -49,7 +49,7 @@
       :items="items"
       label="导出类型"
     ></v-select>
-    <v-btn variant="tonal" block> 导出 </v-btn>
+    <v-btn variant="tonal" block @click="sendOutputEvent"> 导出 </v-btn>
   </v-card-text>
 </template>
 
@@ -61,6 +61,12 @@ export default {
       items: ["PDF", "Markdown", "LaTeX"],
     };
   },
+  methods: {
+    sendOutputEvent() {
+      // 发布名为"output-event"的事件，同时传递数据
+      this.emitter.emit('output-event');
+    }
+  }
 };
 </script>
 

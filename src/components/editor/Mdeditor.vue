@@ -12,17 +12,11 @@ export default {
   data() {
     return {
       converter: new showdown.Converter(),
-      content: `## 解：
-
-由**定积分定义**可得，该极限为：
-
-<div>
-$$
-\\lim_{n\\to+\\infty}\\frac{1}{n} \\sum_{i=1}^n \\ln \\frac{i}{n} = \\int_0^1 \\ln x\\mathrm dx = -1
-$$
-</div>
-`,
+      content: this.message,
     };
+  },
+  props: {
+    message: String,
   },
 };
 </script>

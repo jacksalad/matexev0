@@ -65,7 +65,7 @@
             eg.求极限：$\lim_{n\to+\infty}\frac{1}{n} \sum_{i=1}^n \ln \frac{i}{n}$
           </v-card-text>
           <v-card-text>
-            <MdEditor />
+            <MdEditor :message="MdContentExample" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -79,6 +79,20 @@ import MdEditor from "@/components/editor/Mdeditor.vue"
 export default {
   components: {
     MdEditor
+  },
+  data() {
+    return {
+      MdContentExample: `## 解：
+
+由**定积分定义**可得，该极限为：
+
+<div>
+$$
+\\lim_{n\\to+\\infty}\\frac{1}{n} \\sum_{i=1}^n \\ln \\frac{i}{n} = \\int_0^1 \\ln x\\mathrm dx = -1
+$$
+</div>
+`
+    }
   }
 }
 </script>

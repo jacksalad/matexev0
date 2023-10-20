@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
+    "axios": "^1.5.1",
     "core-js": "^3.29.0",
     "roboto-fontface": "*",
     "showdown": "^2.1.0",
+    "tiny-emitter": "^2.1.0",
     "vue": "^3.2.0",
     "vue-katex-auto-render": "^0.1.4",
     "vue-router": "^4.0.0",
