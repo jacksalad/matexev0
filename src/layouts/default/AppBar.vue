@@ -34,8 +34,12 @@
       </router-link>
     </v-col>
     <v-col cols="2" class="text-center">
-      <v-btn icon="mdi-account"></v-btn>
-      <v-btn icon="mdi-download-circle"></v-btn>
+      <router-link to="/login">
+        <v-btn icon="mdi-account" color="black"></v-btn>
+      </router-link>
+      <router-link to="/" target="_blank">
+        <v-btn icon="mdi-download-circle" color="black"></v-btn>
+      </router-link>
     </v-col>
   </v-app-bar>
 </template>

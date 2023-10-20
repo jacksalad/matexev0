@@ -15,11 +15,15 @@
 <script>
 import Choices from "@/components/exertool/choices.vue";
 import axios from "axios";
+import output from "@/api/output.js"
 
 export default {
   created() {
     // 订阅名为"output-event"的事件
     this.emitter.on("output-event", this.handleOutputEvent);
+  },
+  beforeRouteLeave() {
+    this.emitter.off("output-event", this.handleOutputEvent);
   },
   components: {
     Choices,
@@ -35,7 +39,7 @@ export default {
   methods: {
     fetchData() {
       axios
-        .get("http://www.matexe.cn:443/getexers")
+        .get("http://www.matexe.cn:8080/getexers")
         .then((response) => {
           // 请求成功，将响应数据赋值给items数组
           this.exers = response.data;
@@ -46,31 +50,10 @@ export default {
           console.error("Error fetching data:", error);
         });
     },
-    handleOutputEvent() {
-      var filename = "output.md";
-      var text =
-        "# MaTeXe智能题库\n>  [MaTeXe|迈泰题库-智能数学题库](http://www.matexe.cn)\n\n";
-      this.exers.forEach(function (exer, index) {
-        text += (index + 1).toString() + "." + exer.content;
-        text += "\n";
-        text += "A." + exer.a;
-        text += "\n";
-        text += "B." + exer.b;
-        text += "\n";
-        text += "C." + exer.c;
-        text += "\n";
-        text += "D." + exer.d;
-        text += "\n";
-      });
-      var blob = new Blob([text], {
-        type: "text/markdown",
-      });
-      var url = URL.createObjectURL(blob);
-      var link = document.createElement("a");
-      link.href = url;
-      link.download = filename;
-      link.click();
-      URL.revokeObjectURL(url);
+    handleOutputEvent(outputType) {
+      if (outputType === "Markdown") {
+        output.OutputMd(this.exers)
+      }
     },
   },
 };

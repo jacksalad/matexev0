@@ -2,7 +2,7 @@
   <v-card-text>
     <div v-katex class="radio-group">
       <p>
-        <b>{{ num }}</b> .{{ content }}
+        <b>{{ num }}. </b> {{ content }}
       </p>
 
       <input class="radio-input" :name="'S' + num" :id="'S' + num + 'A'" type="radio" />
@@ -45,7 +45,7 @@ export default defineComponent({
 p {
   font-family: "Times New Roman", sans-serif;
   font-size: 20px;
-  line-height: 2;
+  line-height: 1.6;
   margin: 1em 0;
   text-align: justify;
 }

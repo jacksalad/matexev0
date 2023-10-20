@@ -57,14 +57,17 @@
 export default {
   data() {
     return {
-      selectedItem: "", // 用于存储选中的项目
+      selectedItem: "请选择", // 用于存储选中的项目
       items: ["PDF", "Markdown", "LaTeX"],
     };
   },
   methods: {
     sendOutputEvent() {
+      console.log(this.selectedItem);
       // 发布名为"output-event"的事件，同时传递数据
-      this.emitter.emit('output-event');
+      if (this.selectedItem != "请选择") {
+        this.emitter.emit('output-event', this.selectedItem);
+      }
     }
   }
 };

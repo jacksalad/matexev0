@@ -104,5 +104,6 @@ $$
   padding: 10px !important; /* 左内边距，调整引用文本与左边框的距离 */
   margin: 10px 0; /* 外边距，可根据需要进行调整 */
   background-color: #c1e7ff;
+  line-height: 30px;
 }
 </style>
