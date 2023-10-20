@@ -1,11 +1,11 @@
 <template>
-  <v-app-bar flat class="AppBar">
-    <v-app-bar-title cols="3">
+  <v-app-bar flat class="AppBar text-center">
+    <v-app-bar-title cols="2">
       <a href="/">
         <img src="@/assets/img/logo/logo.svg" alt="logo" />
       </a>
     </v-app-bar-title>
-    <v-row cols="auto">
+    <v-col cols="8" class="text-center">
       <router-link to="/">
         <v-btn
           prepend-icon="mdi-home"
@@ -32,9 +32,11 @@
           >关于</v-btn
         >
       </router-link>
-    </v-row>
-    <v-btn cols="1" icon="mdi-account"></v-btn>
-    <v-btn cols="1" icon="mdi-download-circle"></v-btn>
+    </v-col>
+    <v-col cols="2" class="text-center">
+      <v-btn icon="mdi-account"></v-btn>
+      <v-btn icon="mdi-download-circle"></v-btn>
+    </v-col>
   </v-app-bar>
 </template>
 
