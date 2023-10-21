@@ -4,7 +4,7 @@
       <v-btn
         variant="text"
         block
-        class="font-weight-bold text-deep-purple-darken-4"
+        class="font-weight-bold text-pink-darken-4"
         :class="{ active: $route.path === '/exer' }"
       >
         最新
@@ -14,7 +14,7 @@
       <v-btn
         variant="text"
         block
-        class="font-weight-bold text-deep-purple-darken-4"
+        class="font-weight-bold text-pink-darken-4"
         :class="{ active: $route.path.startsWith('/exer/type1') }"
       >
         单选
@@ -24,7 +24,7 @@
       <v-btn
         variant="text"
         block
-        class="font-weight-bold text-deep-purple-darken-4"
+        class="font-weight-bold text-pink-darken-4"
         :class="{ active: $route.path.startsWith('/exer/type2') }"
       >
         填空
@@ -34,7 +34,7 @@
       <v-btn
         variant="text"
         block
-        class="font-weight-bold text-deep-purple-darken-4"
+        class="font-weight-bold text-pink-darken-4"
         :class="{ active: $route.path.startsWith('/exer/type3') }"
       >
         大题
@@ -78,7 +78,7 @@ export default {
 }
 
 .active {
-  background-color: #5c6bc0; /* 设置选中页面的背景色为红色 */
+  background-color: #f391a9; /* 设置选中页面的背景色为红色 */
   color: #fff !important; /* 设置选中页面的文字颜色为白色 */
 }
 </style>

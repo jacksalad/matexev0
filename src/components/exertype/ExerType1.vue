@@ -14,8 +14,9 @@
 
 <script>
 import Choices from "@/components/exertool/choices.vue";
+import output from "@/api/output.js";
 import axios from "axios";
-import output from "@/api/output.js"
+// import getExer from "@/api/getexer.js"
 
 export default {
   created() {
@@ -39,20 +40,17 @@ export default {
   methods: {
     fetchData() {
       axios
-        .get("http://www.matexe.cn:8080/getexers")
+        .get("https://www.matexe.cn:8080/getexers")
         .then((response) => {
-          // 请求成功，将响应数据赋值给items数组
-          this.exers = response.data;
-          console.log(this.exers);
+          this.exers = response.data; // 更新exers数据
         })
         .catch((error) => {
-          // 请求失败，处理错误
           console.error("Error fetching data:", error);
         });
     },
     handleOutputEvent(outputType) {
       if (outputType === "Markdown") {
-        output.OutputMd(this.exers)
+        output.OutputMd(this.exers);
       }
     },
   },

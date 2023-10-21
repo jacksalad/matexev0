@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-indigo-lighten-1 text-center d-flex flex-column max-height-footer">
+  <v-footer class="bg-mat text-center d-flex flex-column max-height-footer">
     <div>
       <p>
         &copy; {{ new Date().getFullYear() }} — <strong>MaTeXe</strong>. All rights
@@ -15,5 +15,9 @@
 <style>
 .max-height-footer {
   max-height: 70px; /* 设置最大高度为 200px */
+}
+
+.bg-mat {
+  background-color: #f391a9 !important;
 }
 </style>

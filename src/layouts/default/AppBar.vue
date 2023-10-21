@@ -50,7 +50,7 @@ import { RouterLink } from "vue-router";
 
 <style scoped>
 .AppBar {
-  background-color: #5c6bc0 !important;
+  background-color: #f391a9 !important;
 }
 
 .BarLabel {
@@ -60,7 +60,7 @@ import { RouterLink } from "vue-router";
 }
 
 .active {
-  background-color: #494e8f; /* 设置选中页面的背景色为红色 */
+  background-color: #D80169; /* 设置选中页面的背景色为红色 */
   color: #fff; /* 设置选中页面的文字颜色为白色 */
 }
 

@@ -100,10 +100,10 @@ $$
 <style scoped>
 .quote {
   font-style: italic; /* 斜体 */
-  border-left: 4px solid #007bff; /* 左边框样式，可以自行更改颜色 */
+  border-left: 4px solid #b22c46; /* 左边框样式，可以自行更改颜色 */
   padding: 10px !important; /* 左内边距，调整引用文本与左边框的距离 */
   margin: 10px 0; /* 外边距，可根据需要进行调整 */
-  background-color: #c1e7ff;
+  background-color: #feeeed;
   line-height: 30px;
 }
 </style>
