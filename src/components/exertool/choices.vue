@@ -76,12 +76,12 @@ p {
 }
 
 .radio-input:checked + .radio-label {
-  background-color: #b7e4f1;
-  border-color: #5189ef;
+  background-color: #ebc5d7;
+  border-color: #f85bce;
 }
 
 .radio-input:focus + .radio-label {
-  outline: 2px solid #5672d8;
+  outline: 2px solid #f0d6f1;
 }
 
 .radio-inner-circle {
@@ -100,7 +100,7 @@ p {
 }
 
 .radio-input:checked + .radio-label .radio-inner-circle {
-  border-color: #5fb1e7;
+  border-color: #D80169;
 }
 
 .radio-input:checked + .radio-label .radio-inner-circle::after {
@@ -108,7 +108,7 @@ p {
   display: block;
   width: 0.5em;
   height: 0.5em;
-  background-color: #2ac0f1;
+  background-color: #D80169;
   border-radius: 50%;
   position: absolute;
   top: 50%;

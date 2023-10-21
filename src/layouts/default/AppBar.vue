@@ -24,6 +24,24 @@
           习题
         </v-btn>
       </router-link>
+      <router-link to="/blog">
+        <v-btn
+          prepend-icon="mdi-text-box"
+          class="BarLabel"
+          :class="{ active: $route.path.startsWith('/blog') }"
+        >
+          博客
+        </v-btn>
+      </router-link>
+      <router-link to="/discuss">
+        <v-btn
+          prepend-icon="mdi-tooltip-edit"
+          class="BarLabel"
+          :class="{ active: $route.path.startsWith('/discuss') }"
+        >
+          论坛
+        </v-btn>
+      </router-link>
       <router-link to="/about">
         <v-btn
           prepend-icon="mdi-alert-decagram"

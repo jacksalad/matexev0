@@ -1,4 +1,6 @@
 <template>
+  
+
   <Choices
     v-for="(exer, index) in exers"
     :key="index"
