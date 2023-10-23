@@ -3,15 +3,6 @@
     <v-row>
       <v-col cols="12">
         <v-card title="Home" v-katex>
-          <v-card-text class="text-h6 quote">
-            "La vérité doit l'emporter sur le mensonge."&emsp;&emsp;&emsp;&emsp;-Évariste
-            Galois
-            <br />
-            "Truth must prevail over falsehood." &emsp;&emsp;&emsp;&emsp;-Évariste Galois
-            <br />
-            "真理必须战胜谎言。"&emsp;&emsp;&emsp;&emsp;-埃瓦里斯特·伽罗瓦
-            <br />
-          </v-card-text>
 
           <v-card-text>
             <img src="@/assets/img/logo/logoimg.svg" alt="MaTeXe logo" class="w-50" />

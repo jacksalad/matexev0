@@ -55,9 +55,9 @@
       <router-link to="/login">
         <v-btn icon="mdi-account" color="black"></v-btn>
       </router-link>
-      <router-link to="https://saladcloud.s3.bitiful.net/FILE/MaTeXe/file/MaTeXe Setup 0.1.0.exe" target="_blank">
+      <a href="https://saladcloud.s3.bitiful.net/FILE/MaTeXe/file/MaTeXe Setup 0.1.0.exe" target="_blank">
         <v-btn icon="mdi-download-circle" color="black"></v-btn>
-      </router-link>
+      </a>
     </v-col>
   </v-app-bar>
 </template>
