@@ -1,5 +1,7 @@
+import html2pdf from 'html2pdf.js';
+
 export default {
-    OutputMd(exers) {
+    exportToMd(exers) {
         var filename = "output.md";
         var text =
             "# MaTeXe智能题库\n>  [MaTeXe|迈泰题库-智能数学题库](http://www.matexe.cn)\n\n";
@@ -25,4 +27,15 @@ export default {
         link.click();
         URL.revokeObjectURL(url);
     }
+    ,
+    exportToPDF(element) {
+        const options = {
+            filename: "exported.pdf",
+            image: { type: "jpeg", quality: 1 },
+            html2canvas: { scale: 1.5 },
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        };
+
+        html2pdf().set(options).from(element).save();
+    },
 }

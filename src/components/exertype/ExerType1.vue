@@ -1,17 +1,17 @@
 <template>
-  
-
-  <Choices
-    v-for="(exer, index) in exers"
-    :key="index"
-    :num="index + 1"
-    :content="exer.content"
-    :A="exer.a"
-    :B="exer.b"
-    :C="exer.c"
-    :D="exer.d"
-    :answer="exer.answer"
-  />
+  <div ref="pdfContent">
+    <Choices
+      v-for="(exer, index) in exers"
+      :key="index"
+      :num="index + 1"
+      :content="exer.content"
+      :A="exer.a"
+      :B="exer.b"
+      :C="exer.c"
+      :D="exer.d"
+      :answer="exer.answer"
+    />
+  </div>
 </template>
 
 <script>
@@ -52,9 +52,11 @@ export default {
     },
     handleOutputEvent(outputType) {
       if (outputType === "Markdown") {
-        output.OutputMd(this.exers);
+        output.exportToMd(this.exers);
+      } else if (outputType === "PDF") {
+        output.exportToPDF(this.$refs.pdfContent)
       }
-    },
+    }
   },
 };
 </script>
