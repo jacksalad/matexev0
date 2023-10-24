@@ -52,9 +52,11 @@ export default {
     },
     handleOutputEvent(outputType) {
       if (outputType === "Markdown") {
-        output.exportToMd(this.exers);
+        output.exportToMdType1(this.exers);
       } else if (outputType === "PDF") {
-        output.exportToPDF(this.$refs.pdfContent)
+        output.exportToPDFType1(this.$refs.pdfContent)
+      } else if (outputType === "LaTeX") {
+        output.exportToTexType1(this.exers);
       }
     }
   },
